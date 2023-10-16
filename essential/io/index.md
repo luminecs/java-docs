@@ -4,7 +4,7 @@ This lesson covers the Java platform classes used for basic I/O. It first focuse
 
 Most of the classes covered in the `I/O Streams` section are in the `java.io` package. Most of the classes covered in the `File I/O` section are in the `java.nio.file` package.
 
-## [I/O Streams]()
+## [I/O Streams](./streams.md)
 
 * [Byte Streams]() handle I/O of raw binary data.
 * [Character Streams]() handle I/O of character data, automatically handling translation to and from the local character set.
