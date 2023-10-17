@@ -7,7 +7,6 @@ import java.io.IOException;
 public class CopyBytes {
     public static void main(String[] args) throws IOException {
         String appRootPath = System.getProperty("user.dir");
-
         FileInputStream in = null;
         FileOutputStream out = null;
         try {
