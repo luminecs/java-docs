@@ -49,6 +49,6 @@ One possible error is that CopyBytes was unable to open one or both files. When 
 
 ## When Not to Use Byte Streams
 
-CopyBytes seems like a normal program, but it actually represents a kind of low-level I/O that you should avoid. Since xanadu.txt contains character data, the best approach is to use [character streams](), as discussed in the next section. There are also streams for more complicated data types. Byte streams should only be used for the most primitive I/O.
+CopyBytes seems like a normal program, but it actually represents a kind of low-level I/O that you should avoid. Since xanadu.txt contains character data, the best approach is to use [character streams](./charstreams.md), as discussed in the next section. There are also streams for more complicated data types. Byte streams should only be used for the most primitive I/O.
 
 So why talk about byte streams? Because all other streams types are built on byte streams.
