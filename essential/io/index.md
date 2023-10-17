@@ -6,7 +6,7 @@ Most of the classes covered in the `I/O Streams` section are in the `java.io` pa
 
 ## [I/O Streams](./streams.md)
 
-* [Byte Streams]() handle I/O of raw binary data.
+* [Byte Streams](./bytestreams.md) handle I/O of raw binary data.
 * [Character Streams]() handle I/O of character data, automatically handling translation to and from the local character set.
 * [Buffered Streams]() optimize input and output by <u>reducing the number of calls to the native API</u>.
 * [Scanning and Formatting]() allows a program to read to write formatted text.
