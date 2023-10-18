@@ -22,3 +22,5 @@ It often makes sense to write out a buffer at critical points, without waiting f
 Some buffered output classes support autoflush, specified by an optional constructor argument. When autoflush is enabled, certain key events cause the buffer to be flushed. For example, an autoflush `PrintWriter` object flushes the buffer on every invocation of `println` or `format`. See [Formatting]() for more on these methods.
 
 <u>To flush a stream manually, invokes its `flush` method.</u> The `flush` method is valid on any output stream, but has no effort unless the stream is buffered.
+
+> Note: close() 会自动 flush buffer
