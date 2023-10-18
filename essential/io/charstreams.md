@@ -47,7 +47,7 @@ CopyCharacters is very similar to CopyBytes. The most important difference is th
 
 Character streams are often "wrappers" for byte streams. The character stream uses the byte stream to perform the physical I/O, while the character stream handles translation between characters and bytes. FileReader, for example, uses FileInputStream, while FileWriter uses FileOutputStream.
 
-There are two general-purpose byte-to-character "bridge" streams: [InputStreamReader](https://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html) and [OutputStreamWriter](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStreamWriter.html). Use them to create character streams when there are no prepackaged character stream classes that meet your needs. The [sockets lesson] in the [networking trail] shows how to create character streams from the byte streams provided by socket classes.
+There are two general-purpose byte-to-character "bridge" streams: [InputStreamReader](https://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html) and [OutputStreamWriter](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStreamWriter.html). Use them to create character streams when there are no prepackaged character stream classes that meet your needs. The [sockets lesson]() in the [networking trail]() shows how to create character streams from the byte streams provided by socket classes.
 
 ## Line-Oriented I/O
 
