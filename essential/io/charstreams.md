@@ -52,3 +52,39 @@ There are two general-purpose byte-to-character "bridge" streams: [InputStreamRe
 ## Line-Oriented I/O
 
 Character I/O usually occurs in bigger units than single characters. One common unit is the line: a string of characters with a line terminator at the end. A line terminator can be a `carriage-return/line-feed sequence ("\r\n")`, a `single carriage-return ("\r")`, or a `single line-feed ("\n")`. Supporting all possible line terminators allows programs to read text files created on any of the widely used operating systems.
+
+Let's modify the CopyCharacters example to use line-oriented I/O. To do this, we have to use two classes we haven't seen before, [BufferedReader](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html) and [PrintWriter](https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html). We'll explore these classes in greater depth in [Buffered I/O]() and [Formatting](). Right now, we're just interested in their support for line-oriented I/O.
+
+The [CopyLines](https://docs.oracle.com/javase/tutorial/essential/io/examples/CopyLines.java) example invokes `BufferedReader.readLine` and `PrintWriter.println` to do input and output one line at a time.
+
+```java
+import java.io.*;
+
+public class CopyLines {
+    public static void main(String[] args) throws IOException {
+        String appRootPath = System.getProperty("user.dir");
+        BufferedReader inputStream = null;
+        PrintWriter outputStream = null;
+        try {
+            inputStream = new BufferedReader(new FileReader(appRootPath + "/essential/io/xanadu.txt"));
+            outputStream = new PrintWriter(new FileWriter(appRootPath + "/essential/io/characteroutput.txt"));
+
+            String l;
+            while ((l = inputStream.readLine()) != null) {
+                outputStream.println(l);
+            }
+        } finally {
+            if (inputStream != null) {
+                inputStream.close();
+            }
+            if (outputStream != null) {
+                outputStream.close();
+            }
+        }
+    }
+}
+```
+
+Invoking `readLine` returns a line of text with the line. CopyLines outputs each line using `println`, <u>which appends the line terminator for the current operating system. This might not be the same line terminator that was used in the input file.</u>
+
+There are many ways to structure text input and output beyond characters and lines. For more information, see [Scanning and Formatting]().
